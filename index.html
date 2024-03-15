@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Partially Observable Task and Motion Planning with Uncertainty and Risk Awareness">
+  <meta name="keywords" content="TAMPURA, TAMP, Planning, Uncertainty, Partial, Observability">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TAMPURA</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Partially Observable Task and Motion Planning with Uncertainty and
+              Risk Awareness</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://aidanreececurtis.com/">Aidan Curtis</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://george.matheos.com/">George Matheos</a>,
+              </span>
+              <span class="author-block">
+                <a href="http://www.nishadg.com/">Nishad Gothoskar</a>,
+              </span>
+              <span class="author-block">
+                <a href="http://probcomp.csail.mit.edu/principal-investigator/">Vikash Mansinghka</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://web.mit.edu/cocosci/josh.html">Joshua Tenenbaum,</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://people.csail.mit.edu/tlp/">Tomás Lozano-Pérez</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://people.csail.mit.edu/lpk/">Leslie Pack Kaelbling</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">MIT EECS</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming soon)</span>
+                  </a>
+                </span>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+
+        <div class="column">
+          <div class="hero-body">
+            <video id="exp5_ld" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/exp5_ld.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              TAMPURA efficiently searching for a hidden object among many occluders
+            </h2>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="hero-body">
+            <video id="exp5_ld" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/exp9_ld.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              TAMPURA completing a long-horizon task while avoiding a human in the workspace
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Integrated task and motion planning (TAMP) has proven to be a valuable approach to generalizable
+              long-horizon robotic manipulation and navigation problems. However, the typical TAMP problem formulation
+              assumes full observability and deterministic action effects. These assumptions limit the ability of the
+              planner to gather information and make decisions that are risk-aware. We propose a strategy for TAMP with
+              Uncertainty and Risk Awareness (TAMPURA) that is capable of efficiently solving long-horizon planning
+              problems with initial-state and action outcome uncertainty, including problems that require information
+              gathering and avoiding undesirable and irreversible outcomes. Our planner reasons under uncertainty at
+              both the abstract task level and continuous controller level. Given a set of closed-loop goal-conditioned
+              controllers operating in the primitive action space and a description of their preconditions and potential
+              capabilities, we learn a high-level abstraction that can be solved efficiently and then refined to
+              continuous actions for execution. We demonstrate our approach on several robotics problems where
+              uncertainty is a crucial factor and show that reasoning under uncertainty in these problems outperforms
+              previously proposed determinized planning, direct search, and reinforcement learning strategies. Lastly,
+              we demonstrate our planner on two real-world robotics problems using recent advancements in probabilistic
+              perception.
+            </p>
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Joint phyiscal and perceptual reasoning</h2>
+
+      <div class="columns is-centered">
+
+        <div class="column">
+          <div class="hero-body">
+            <video id="exp1_ld" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/exp1_ld.mp4" type="video/mp4">
+            </video>
+            <p class=" has-text-centered">
+              The robot first looks behind the cracker box, sees the object, and then picks it up.
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="hero-body">
+            <video id="exp2_ld" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/exp2_ld.mp4" type="video/mp4">
+            </video>
+            <p class=" has-text-centered">
+              The cracker box is now too far away to look behind directly, so the robot must move the box out of the way
+              to look behind it.
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="hero-body">
+            <video id="exp3_ld" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/exp3_ld.mp4" type="video/mp4">
+            </video>
+            <p class=" has-text-centered">
+              The block is now too close to the box to be picked without collision, so the robot must move the box
+              before picking the block.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Probabilistically Efficient Search</h2>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="hero-body">
+            <video id="exp4_ld" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/exp4_ld.mp4" type="video/mp4">
+            </video>
+            <p class=" has-text-centered">
+              The robot looks behind the largest object first, which is the most likely location of the hidden object.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="hero-body">
+            <video id="exp6_ld" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/exp6_ld.mp4" type="video/mp4">
+            </video>
+            <p class=" has-text-centered">
+              The <a
+                href="https://www.google.com/search?q=bayes3d&oq=bayes3d&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPNIBCDE2NDdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8">Bayes3D</a>
+              perception system recognizes the target object (banana) could only be behind the book.
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="hero-body">
+            <video id="exp5_ld" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/exp5_ld.mp4" type="video/mp4">
+            </video>
+            <p class=" has-text-centered">
+              The robot first looks behind the target objects and the underneath them until it finds the target object.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <br>
+    <br>
+    <h2 class="title is-3 has-text-centered">Simulated Experiments</h2>
+    <div class="content has-text-centered">
+      <video id="replay-video" controls muted preload playsinline width="50%">
+        <source src="./static/videos/puck.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <h3 class="title is-4 has-text-centered">Physical uncertainty</h3>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            In this task, the robot plays a game of shuffleboard with a puck of unknown friction.
+            It must first push the puck around the shuffleboard to estimate its friction before attempting the shot.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="content has-text-centered">
+      <video id="replay-video" controls muted preload playsinline width="50%">
+        <source src="./static/videos/tool_use.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <h3 class="title is-4 has-text-centered">Pose Uncertainty</h3>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            The robot has to stack three blocks, but is uncertain about their exact pose. Directly picking the objects
+            would result in a low probability of success,
+            so it uses the puck to reduce pose uncertainty before stacking the blocks.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <br>
+    <br>
+
+
+    <div class="content has-text-centered">
+      <video id="replay-video" controls muted preload playsinline width="50%">
+        <source src="./static/videos/find_die.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <h3 class="title is-4 has-text-centered">Partial Observability</h3>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            The robot is searching for a small object (a die) in a cluttered scene. It can look behind objects or pick and place potential obstructors, but must avoid dropping breakable objects.
+            What is the most efficient search strategy?
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <br>
+    <br>
+
+
+    <div class="content has-text-centered">
+      <video id="replay-video" controls muted preload playsinline width="50%">
+        <source src="./static/videos/slam.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <h3 class="title is-4 has-text-centered">Localization and Manipulation</h3>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            The robot most navigate through this 2d work and collect all the yellow blocks. Over time, it loses track of where it is and has to relocalize at the blue beacons.
+          </p>
+        </div>
+      </div>
+    </div>
+ 
+
+    <br>
+  </section>
+
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>coming soon!</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <div class="content">
+
+          The template for this website can be found <a href="https://github.com/nerfies/nerfies.github.io">here</a>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
