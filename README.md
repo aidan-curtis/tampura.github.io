@@ -1,14 +1,16 @@
-# Nerfies
+# TAMPURA
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [TAMPURA website](https://aidan-curtis.github.io/tampura.github.io/).
 
-If you find Nerfies useful for your work please cite:
+If you find TAMPURA useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@misc{curtis2024partially,
+  title={Partially Observable Task and Motion Planning with Uncertainty and Risk Awareness}, 
+  author={Aidan Curtis and George Matheos and Nishad Gothoskar and Vikash Mansinghka and Joshua Tenenbaum and Tomás Lozano-Pérez and Leslie Pack Kaelbling},
+  year={2024},
+  eprint={2403.10454},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO}
 }
 ```
 
